@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### Assignment for Slap City, Senior Developer Candidate
 
 ## Getting Started
 
@@ -16,21 +16,64 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+**Objective:** Develop a secure authentication system for a Next.js application that integrates with Solana wallet adapter and Prisma with MySQL. The application should include basic functionality to log in, access protected content, and log out. Emphasis is on secure and efficient implementation.
 
-## Learn More
+### Requirements
 
-To learn more about Next.js, take a look at the following resources:
+1. **Project Setup**:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   - Use **Next.js** with the App Router.
+   - Integrate **Solana Wallet Adapter** for authentication.
+   - Use **Prisma** to connect to a **MySQL** database.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+2. **Database Schema**:
 
-## Deploy on Vercel
+   - Design a `User` table with appropriate fields to handle user information and authentication status.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. **Application Pages**:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   - **Home Page** (`/`):
+
+     - Include a "Login with Wallet" button.
+     - Implement a secure authentication mechanism using the user's Solana wallet.
+     - Upon successful login, redirect the user to the member area.
+
+   - **Member Page** (`/member`):
+     - Only accessible to authenticated users.
+     - Display a simple counter that increments on button press using a `useEffect` hook.
+     - Include a "Logout" button to securely end the user session and redirect back to the home page.
+
+4. **Security Focus**:
+
+   - Implement a secure login flow. Consider different security aspects such as:
+     - Preventing unauthorized access.
+     - Handling sensitive data securely.
+     - Ensuring data integrity.
+   - Avoid common security pitfalls in web development.
+
+5. **Logout Functionality**:
+
+   - Ensure that logging out securely invalidates the user's session.
+
+6. **Best Practices**:
+
+   - Use TypeScript to ensure code quality and reliability.
+   - Include error handling and validation.
+
+7. **Global State Management with Jotai**:
+   - Use Jotai to store and manage the global state.
+
+### Deliverables
+
+1. **Source Code**:
+   - A GitHub repository containing the complete project.
+   - Include a `.env.example` file to specify necessary environment variables.
+
+### Evaluation Criteria
+
+- **Code Quality**: Clean, readable, and maintainable code.
+- **Security**: Robust implementation of the authentication process with a focus on security.
+- **Functionality**: Correct and complete implementation of login, logout, and protected routes.
+- **Creativity**: Innovative and effective solutions to the given problem.
+- **Problem-Solving**: Ability to handle challenges and implement a secure authentication flow independently.
